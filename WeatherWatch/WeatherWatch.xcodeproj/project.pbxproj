@@ -20,6 +20,8 @@
 		D45072602294689200685038 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450725F2294689200685038 /* ExtensionDelegate.swift */; };
 		D45072622294689200685038 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45072612294689200685038 /* NotificationController.swift */; };
 		D45072642294689200685038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45072632294689200685038 /* Assets.xcassets */; };
+		D45072752294701D00685038 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45072742294701D00685038 /* Weather.swift */; };
+		D45072762294701D00685038 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45072742294701D00685038 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,7 @@
 		D45072632294689200685038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D45072652294689200685038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45072662294689200685038 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D45072742294701D00685038 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,7 @@
 				D45072412294689100685038 /* Assets.xcassets */,
 				D45072432294689100685038 /* LaunchScreen.storyboard */,
 				D45072462294689100685038 /* Info.plist */,
+				D45072742294701D00685038 /* Weather.swift */,
 			);
 			path = WeatherWatch;
 			sourceTree = "<group>";
@@ -292,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D450723D2294688E00685038 /* ViewController.swift in Sources */,
+				D45072752294701D00685038 /* Weather.swift in Sources */,
 				D450723B2294688E00685038 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45072762294701D00685038 /* Weather.swift in Sources */,
 				D45072622294689200685038 /* NotificationController.swift in Sources */,
 				D45072602294689200685038 /* ExtensionDelegate.swift in Sources */,
 				D450725E2294689200685038 /* InterfaceController.swift in Sources */,
