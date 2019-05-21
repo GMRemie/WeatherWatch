@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        var t = Weather.init()
+        APIRequest.init().getWeatherJsonData(_weather: t)
+        
+        print("this was ran")
         
     }
 

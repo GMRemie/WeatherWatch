@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import WatchConnectivity
 
 class Weather: NSObject,NSCoding {
 
@@ -21,13 +20,13 @@ class Weather: NSObject,NSCoding {
     var icon: String?
     var pressure: Int?
     var temperature: Int?
-    var windspeed: Int?
+    var windspeed: Double?
     
     // Pollution
     var quality: Int?
     
     
-    init(_city: String,_state:String,_country:String,_humidity:Int,_icon:String,_pressure:Int,_temperature:Int,_windspeed:Int,_quality:Int){
+    init(_city: String,_state:String,_country:String,_humidity:Int,_icon:String,_pressure:Int,_temperature:Int,_windspeed:Double,_quality:Int){
         self.city = _city
         self.state = _state
         self.country = _country
@@ -39,6 +38,9 @@ class Weather: NSObject,NSCoding {
         self.quality = _quality
     }
     
+    override init() {
+        
+    }
     
     
     
