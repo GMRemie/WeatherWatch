@@ -13,6 +13,7 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController,WCSessionDelegate {
     
     var weatherData:Weather?
+    @IBOutlet weak var quality_label: WKInterfaceLabel!
     
     @available(watchOS 2.2, *)
     public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){
@@ -42,9 +43,10 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
                             }
                             
                             self.weatherData = weatherObject
-                            
-                            // hide whateer loading UI here
-                            print("WEATHER \(self.weatherData?.city) \(self.weatherData?.quality)" )
+                            // hide whatever loading UI here
+                            print(self.weatherData?.quality)
+                            let qualityString = String(self.weatherData!.quality!)
+                            self.quality_label.setText(qualityString)
                             
                             
                         } catch {
@@ -55,6 +57,11 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
                 }
             }, errorHandler: nil)
         }
+    }
+    
+    func refreshUI(){
+        
+        
     }
     
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {

@@ -71,7 +71,7 @@ extension ViewController{
         let pollution = current["pollution"] as! [String:Any]
         let quality = pollution["aqius"] as! Int
         
-        var dataobj = Weather.init(_city: city, _state: state, _country: country, _humidity: humidity, _icon: icon, _pressure: pressure, _temperature: temp, _windspeed: windspeed, _quality: quality)
+        let dataobj = Weather.init(_city: city, _state: state, _country: country, _humidity: humidity, _icon: icon, _pressure: pressure, _temperature: temp, _windspeed: windspeed, _quality: quality)
         
         assignWeatherDataObject(weatherObj: dataobj)
         

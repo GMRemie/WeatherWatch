@@ -12,7 +12,21 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WeatherWatch_WatchKit_App" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WeatherWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" animationDuration="1" id="Fzf-Kx-338">
+                            <items>
+                                <label alignment="center" text="..." id="jk5-yX-i2l">
+                                    <fontDescription key="font" type="boldSystem" pointSize="100"/>
+                                </label>
+                            </items>
+                            <color key="backgroundColor" red="0.73668485880000001" green="0.90270721909999996" blue="0.47441756730000001" alpha="0.79339683220000001" colorSpace="custom" customColorSpace="displayP3"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="quality_label" destination="jk5-yX-i2l" id="19S-hR-J8m"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
