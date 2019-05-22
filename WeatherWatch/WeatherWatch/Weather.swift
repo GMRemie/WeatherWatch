@@ -67,7 +67,7 @@ class Weather: NSObject,NSCoding {
         icon = a.decodeObject(forKey: "dataIcon") as? String
         pressure = a.decodeObject(forKey: "dataPressure") as? Int
         temperature = a.decodeObject(forKey: "dataTemperature") as? Int
-        windspeed = a.decodeObject(forKey: "dataWindspeed") as? Int
+        windspeed = a.decodeObject(forKey: "dataWindspeed") as? Double
         quality = a.decodeObject(forKey: "dataQuality") as? Int
         
     }

@@ -9,18 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var weatherData:Weather?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var t = Weather.init()
-        APIRequest.init().getWeatherJsonData(_weather: t)
-        
-        print("this was ran")
+
+        getWeatherJsonData()
+    
+        while weatherData == nil{
+            // do loading stuff
+            // hide loading animation after this while loop
+        }
+
+        if let myDelegate = UIApplication.shared.delegate as? AppDelegate {
+            myDelegate.loadWeatherData(weather: weatherData!)
+        }
+
         
     }
 
-
+    func assignWeatherDataObject(weatherObj:Weather){
+        weatherData = weatherObj
+    }
+    
 }
 

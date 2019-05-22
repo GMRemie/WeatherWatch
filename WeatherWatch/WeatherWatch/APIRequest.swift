@@ -8,15 +8,10 @@
 
 import Foundation
 
-class APIRequest{
+extension ViewController{
+
     
-    var weather:Weather? = nil
-    
-    init(){
-        
-    }
-    
-    func getWeatherJsonData(_weather: Weather){
+    func getWeatherJsonData(){
         
         print("This was ran")
         guard let url = URL(string: "https://api.airvisual.com/v2/nearest_city?key=HMb6tJNuErQoWcD8f") else{
@@ -38,7 +33,7 @@ class APIRequest{
             do{
                 let data = try JSONSerialization.jsonObject(with: response, options: .mutableContainers) as? [String:Any]
                 print("parsing data")
-                self.parseJsonWeatherData(_weather: _weather, jsonRaw: data)
+                self.parseJsonWeatherData( jsonRaw: data)
             }catch{
                 print("Error")
                 return
@@ -50,8 +45,7 @@ class APIRequest{
         
     }
     
-    func parseJsonWeatherData(_weather:Weather,jsonRaw:[String:Any]?){
-        print("Is it being ran?")
+    func parseJsonWeatherData(jsonRaw:[String:Any]?){
         guard let json = jsonRaw else{
             print("Error unwrapping json object")
             return
@@ -77,9 +71,11 @@ class APIRequest{
         let pollution = current["pollution"] as! [String:Any]
         let quality = pollution["aqius"] as! Int
         
-        print(quality)
+        var dataobj = Weather.init(_city: city, _state: state, _country: country, _humidity: humidity, _icon: icon, _pressure: pressure, _temperature: temp, _windspeed: windspeed, _quality: quality)
         
-
+        assignWeatherDataObject(weatherObj: dataobj)
+        
+        print("Completed creating weather Object")
     }
     
     
