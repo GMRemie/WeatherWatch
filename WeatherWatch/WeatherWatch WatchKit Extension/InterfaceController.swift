@@ -11,9 +11,17 @@ import Foundation
 import WatchConnectivity
 
 class InterfaceController: WKInterfaceController,WCSessionDelegate {
+
+    // UI variables and objects
+    
+    
+    @IBOutlet weak var backgroundGroup: WKInterfaceGroup!
+    // load our animations stuff first
+
+    @IBOutlet weak var loadingImage: WKInterfaceImage!
     
     var weatherData:Weather?
-    @IBOutlet weak var quality_label: WKInterfaceLabel!
+
     
     @available(watchOS 2.2, *)
     public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){
@@ -23,12 +31,18 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     
     override init() {
         super.init()
+        addLoadingImages()
         session?.delegate = self
         session?.activate()
+
+
         getWeatherData()
+        
    }
     
+    
     func getWeatherData(){
+        
         print("Get data")
        let myValues:[String:Any] = ["getWeather":true]
         if let session = session, session.isReachable{
@@ -44,10 +58,9 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
                             
                             self.weatherData = weatherObject
                             // hide whatever loading UI here
-                            print(self.weatherData?.quality)
                             let qualityString = String(self.weatherData!.quality!)
-                            self.quality_label.setText(qualityString)
-                            
+                            print(qualityString)
+                            self.finishedLoading()
                             
                         } catch {
                             fatalError(error as! String)
@@ -59,9 +72,10 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         }
     }
     
-    func refreshUI(){
-        
-        
+    func finishedLoading(){
+
+        pushController(withName: "loadedView", context: weatherData!)
+        controller
     }
     
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
@@ -84,4 +98,7 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
         super.didDeactivate()
     }
 
+    
+    
+    
 }

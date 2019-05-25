@@ -29,6 +29,8 @@ class ViewController: UIViewController {
 
         
     }
+    
+    
 
     func assignWeatherDataObject(weatherObj:Weather){
         weatherData = weatherObj

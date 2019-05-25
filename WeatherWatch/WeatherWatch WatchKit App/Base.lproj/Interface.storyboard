@@ -14,21 +14,28 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WeatherWatch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="center" animationDuration="1" id="Fzf-Kx-338">
+                        <label alignment="center" text="Loading.." id="ZBa-2l-Amz"/>
+                        <separator alignment="left" id="uDM-mu-orE"/>
+                        <group width="1" height="101" alignment="center" verticalAlignment="center" animationDuration="1" id="Fzf-Kx-338">
                             <items>
-                                <label alignment="center" text="..." id="jk5-yX-i2l">
-                                    <fontDescription key="font" type="boldSystem" pointSize="100"/>
-                                </label>
+                                <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFit" id="IoF-77-xYL"/>
                             </items>
-                            <color key="backgroundColor" red="0.73668485880000001" green="0.90270721909999996" blue="0.47441756730000001" alpha="0.79339683220000001" colorSpace="custom" customColorSpace="displayP3"/>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="quality_label" destination="jk5-yX-i2l" id="19S-hR-J8m"/>
+                        <outlet property="backgroundGroup" destination="Fzf-Kx-338" id="Ssa-cq-dXt"/>
+                        <outlet property="loadingImage" destination="IoF-77-xYL" id="WJ5-M2-ae8"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--loadedView-->
+        <scene sceneID="nVL-7q-JUU">
+            <objects>
+                <controller identifier="loadedView" id="HYv-n0-Iaj" customClass="LoadedInterfaceController" customModule="WeatherWatch_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="354"/>
         </scene>
     </scenes>
 </document>
