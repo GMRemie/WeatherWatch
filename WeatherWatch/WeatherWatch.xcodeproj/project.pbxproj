@@ -24,6 +24,7 @@
 		D45072762294701D00685038 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45072742294701D00685038 /* Weather.swift */; };
 		D45072782294807800685038 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45072772294807800685038 /* APIRequest.swift */; };
 		D450727A2299AE9B00685038 /* AnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45072792299AE9B00685038 /* AnimationExtension.swift */; };
+		D48A4340229CFEEE00A3E9B3 /* WeatherInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A433F229CFEEE00A3E9B3 /* WeatherInterfaceController.swift */; };
 		D4FA6CD92299FC2E005F8DB4 /* LoadedInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA6CD82299FC2E005F8DB4 /* LoadedInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		D45072742294701D00685038 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		D45072772294807800685038 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		D45072792299AE9B00685038 /* AnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExtension.swift; sourceTree = "<group>"; };
+		D48A433F229CFEEE00A3E9B3 /* WeatherInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInterfaceController.swift; sourceTree = "<group>"; };
 		D4FA6CD82299FC2E005F8DB4 /* LoadedInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 				D45072662294689200685038 /* PushNotificationPayload.apns */,
 				D45072792299AE9B00685038 /* AnimationExtension.swift */,
 				D4FA6CD82299FC2E005F8DB4 /* LoadedInterfaceController.swift */,
+				D48A433F229CFEEE00A3E9B3 /* WeatherInterfaceController.swift */,
 			);
 			path = "WeatherWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				D45072762294701D00685038 /* Weather.swift in Sources */,
 				D45072622294689200685038 /* NotificationController.swift in Sources */,
 				D4FA6CD92299FC2E005F8DB4 /* LoadedInterfaceController.swift in Sources */,
+				D48A4340229CFEEE00A3E9B3 /* WeatherInterfaceController.swift in Sources */,
 				D450727A2299AE9B00685038 /* AnimationExtension.swift in Sources */,
 				D45072602294689200685038 /* ExtensionDelegate.swift in Sources */,
 				D450725E2294689200685038 /* InterfaceController.swift in Sources */,

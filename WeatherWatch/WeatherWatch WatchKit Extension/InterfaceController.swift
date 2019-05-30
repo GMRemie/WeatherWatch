@@ -74,8 +74,10 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
     
     func finishedLoading(){
 
-        pushController(withName: "loadedView", context: weatherData!)
-        controller
+        print("Trying to load loaded controller")
+       
+        WKInterfaceController.reloadRootPageControllers(withNames: ["loadedView","loadedViewTwo","loadedViewThree"], contexts: [self.weatherData!], orientation: .horizontal, pageIndex: 2)
+        
     }
     
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {

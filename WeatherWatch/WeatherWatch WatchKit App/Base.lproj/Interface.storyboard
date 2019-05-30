@@ -14,7 +14,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WeatherWatch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="Loading.." id="ZBa-2l-Amz"/>
+                        <label alignment="center" text="Loading" id="ZBa-2l-Amz"/>
                         <separator alignment="left" id="uDM-mu-orE"/>
                         <group width="1" height="101" alignment="center" verticalAlignment="center" animationDuration="1" id="Fzf-Kx-338">
                             <items>
@@ -33,9 +33,52 @@
         <!--loadedView-->
         <scene sceneID="nVL-7q-JUU">
             <objects>
-                <controller identifier="loadedView" id="HYv-n0-Iaj" customClass="LoadedInterfaceController" customModule="WeatherWatch_WatchKit_Extension"/>
+                <controller identifier="loadedView" id="HYv-n0-Iaj" customClass="LoadedInterfaceController" customModule="WeatherWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="3Ue-vr-wuS">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="32" id="0hc-f0-woO">
+                                    <color key="textColor" red="0.73668485880000001" green="0.90270721909999996" blue="0.47441756730000001" alpha="0.79339683220000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <fontDescription key="font" type="system" weight="heavy" pointSize="110"/>
+                                </label>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="Yz7-EH-tO2"/>
+                        <group width="1" alignment="left" id="Yb3-E5-DdI">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Location" id="EhF-Bf-MqP"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="airqualityLabel" destination="0hc-f0-woO" id="atc-Ii-Co0"/>
+                        <outlet property="locationLabel" destination="EhF-Bf-MqP" id="83m-NC-OEr"/>
+                        <segue destination="6H5-QC-D8P" kind="relationship" relationship="nextPage" id="ysg-ev-ppk"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="562" y="354"/>
+        </scene>
+        <!--loadedViewTwo-->
+        <scene sceneID="o7R-zZ-HWX">
+            <objects>
+                <controller identifier="loadedViewTwo" id="6H5-QC-D8P" customClass="WeatherInterfaceController" customModule="WeatherWatch_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Button" id="yaR-bt-JKx"/>
+                    </items>
+                    <connections>
+                        <segue destination="HNt-xr-KYB" kind="relationship" relationship="nextPage" id="Dkj-eH-6Lm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="841" y="359"/>
+        </scene>
+        <!--loadedViewThree-->
+        <scene sceneID="qQF-o6-t7E">
+            <objects>
+                <controller identifier="loadedViewThree" id="HNt-xr-KYB"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="354"/>
         </scene>
     </scenes>
 </document>
