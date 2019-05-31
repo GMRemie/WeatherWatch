@@ -137,14 +137,14 @@
 		D45072392294688E00685038 /* WeatherWatch */ = {
 			isa = PBXGroup;
 			children = (
+				D48A434122A1A45D00A3E9B3 /* Objects */,
 				D450723A2294688E00685038 /* AppDelegate.swift */,
 				D450723C2294688E00685038 /* ViewController.swift */,
+				D45072772294807800685038 /* APIRequest.swift */,
 				D450723E2294688E00685038 /* Main.storyboard */,
 				D45072412294689100685038 /* Assets.xcassets */,
 				D45072432294689100685038 /* LaunchScreen.storyboard */,
 				D45072462294689100685038 /* Info.plist */,
-				D45072742294701D00685038 /* Weather.swift */,
-				D45072772294807800685038 /* APIRequest.swift */,
 			);
 			path = WeatherWatch;
 			sourceTree = "<group>";
@@ -173,6 +173,14 @@
 				D48A433F229CFEEE00A3E9B3 /* WeatherInterfaceController.swift */,
 			);
 			path = "WeatherWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D48A434122A1A45D00A3E9B3 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D45072742294701D00685038 /* Weather.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

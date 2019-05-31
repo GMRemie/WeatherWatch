@@ -15,22 +15,21 @@ class LoadedInterfaceController: WKInterfaceController {
     var weatherData: Weather!
     @IBOutlet weak var airqualityLabel: WKInterfaceLabel!
     @IBOutlet weak var locationLabel: WKInterfaceLabel!
+    @IBOutlet weak var countryLabel: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-
-
         guard let weather = context as? Weather else{
             print("Error passing weather")
             return
         }
+        
         weatherData = weather
         locationLabel.setText("\(weatherData.city!), \(weatherData.state!)")
         updateAirQuality(quality: weatherData.quality!)
+        countryLabel.setText(weatherData.country!)
         becomeCurrentPage()
-        
-        
     }
     
     private func updateAirQuality(quality: Int){
@@ -68,7 +67,6 @@ class LoadedInterfaceController: WKInterfaceController {
         }
         airqualityLabel.setTextColor(color!)
         airqualityLabel.setText("\(weatherData.quality!)")
-
     }
 
     override func willActivate() {

@@ -33,13 +33,13 @@
         <!--loadedView-->
         <scene sceneID="nVL-7q-JUU">
             <objects>
-                <controller identifier="loadedView" id="HYv-n0-Iaj" customClass="LoadedInterfaceController" customModule="WeatherWatch_WatchKit_App" customModuleProvider="target">
+                <controller identifier="loadedView" spacing="0.0" id="HYv-n0-Iaj" customClass="LoadedInterfaceController" customModule="WeatherWatch_WatchKit_App" customModuleProvider="target">
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="3Ue-vr-wuS">
                             <items>
                                 <label alignment="center" verticalAlignment="center" text="32" id="0hc-f0-woO">
                                     <color key="textColor" red="0.73668485880000001" green="0.90270721909999996" blue="0.47441756730000001" alpha="0.79339683220000001" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <fontDescription key="font" type="system" weight="heavy" pointSize="110"/>
+                                    <fontDescription key="font" type="system" weight="heavy" pointSize="90"/>
                                 </label>
                             </items>
                         </group>
@@ -49,23 +49,24 @@
                                 <label alignment="center" verticalAlignment="center" text="Location" id="EhF-Bf-MqP"/>
                             </items>
                         </group>
+                        <label alignment="center" text="Country" textAlignment="center" id="FhS-Em-fKW">
+                            <fontDescription key="font" type="system" weight="light" pointSize="9"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="airqualityLabel" destination="0hc-f0-woO" id="atc-Ii-Co0"/>
+                        <outlet property="countryLabel" destination="FhS-Em-fKW" id="LjZ-nk-Jwa"/>
                         <outlet property="locationLabel" destination="EhF-Bf-MqP" id="83m-NC-OEr"/>
                         <segue destination="6H5-QC-D8P" kind="relationship" relationship="nextPage" id="ysg-ev-ppk"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="562" y="354"/>
+            <point key="canvasLocation" x="606" y="360"/>
         </scene>
         <!--loadedViewTwo-->
         <scene sceneID="o7R-zZ-HWX">
             <objects>
                 <controller identifier="loadedViewTwo" id="6H5-QC-D8P" customClass="WeatherInterfaceController" customModule="WeatherWatch_WatchKit_Extension">
-                    <items>
-                        <button width="1" alignment="left" title="Button" id="yaR-bt-JKx"/>
-                    </items>
                     <connections>
                         <segue destination="HNt-xr-KYB" kind="relationship" relationship="nextPage" id="Dkj-eH-6Lm"/>
                     </connections>
