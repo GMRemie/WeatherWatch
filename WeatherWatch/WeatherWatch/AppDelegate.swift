@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if WCSession.isSupported() {
             session = WCSession.default
         }
-        getWeatherJsonData()
+        //getWeatherJsonData()
         return true
     }
 }
@@ -74,7 +74,7 @@ extension AppDelegate{
     // api downloader
     func getWeatherJsonData(){
         
-        print("This was ran")
+        print("This was AAAAran")
         guard let url = URL(string: "https://api.airvisual.com/v2/nearest_city?key=HMb6tJNuErQoWcD8f") else{
             print("Error constructing URL"); return
         }

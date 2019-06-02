@@ -37,11 +37,11 @@ class WeatherInterfaceController: WKInterfaceController {
     
     func updateWeatherDetails(){
         // Humidity
-        humidityLabel.setText("Humidity: \(weatherData.humidity!)")
+        humidityLabel.setText("Humidity: \(weatherData.humidity!)%")
         // Pressure
         pressureLabel.setText("Pressure: \(weatherData.pressure!)")
         // Windspeed
-        windspeedLabel.setText("Windspeed: \(weatherData.windspeed!)")
+        windspeedLabel.setText("Windspeed: \(weatherData.windspeed!) m/s")
     }
     
     func updateWeatherTemperature(){

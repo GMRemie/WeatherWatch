@@ -11,11 +11,18 @@ import UIKit
 class ViewController: UIViewController {
     var weatherData:Weather?
     
+    @IBOutlet weak var loadingImage: UIImageView!
+    var animationImages: [UIImage]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        loadImages()
+        loadingImage.animationImages = animationImages
+        loadingImage.animationDuration = TimeInterval.init(exactly: 2.0)!
+        loadingImage.animationRepeatCount = 0
+        loadingImage.startAnimating()
         
-
         getWeatherJsonData()
     
         while weatherData == nil{
@@ -33,8 +40,21 @@ class ViewController: UIViewController {
     
 
     func assignWeatherDataObject(weatherObj:Weather){
+        print("Completed")
         weatherData = weatherObj
+        // finished loading
+        performSegue(withIdentifier: "loadedSegue", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? LoadedViewController {
+            destination.weatherData = self.weatherData!
+        }
+    }
+    
+    
+    func loadImages(){
+
+    }
 }
 
