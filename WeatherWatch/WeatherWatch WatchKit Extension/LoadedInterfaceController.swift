@@ -73,6 +73,8 @@ class LoadedInterfaceController: WKInterfaceController {
         super.willActivate()
     }
 
+    
+    
     override func didDeactivate() {
         super.didDeactivate()
     }

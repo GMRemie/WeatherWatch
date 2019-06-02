@@ -66,20 +66,52 @@
         <!--loadedViewTwo-->
         <scene sceneID="o7R-zZ-HWX">
             <objects>
-                <controller identifier="loadedViewTwo" id="6H5-QC-D8P" customClass="WeatherInterfaceController" customModule="WeatherWatch_WatchKit_Extension">
+                <controller identifier="loadedViewTwo" spacing="1" id="6H5-QC-D8P" customClass="WeatherInterfaceController" customModule="WeatherWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="center" id="ARO-PC-RkP">
+                            <items>
+                                <label alignment="center" text="00" textAlignment="center" id="MyA-mX-U8A">
+                                    <fontDescription key="font" type="system" weight="heavy" pointSize="70"/>
+                                </label>
+                                <imageView width="36" height="36" alignment="right" image="sun32" contentMode="scaleAspectFill" id="Qrt-SA-WtQ"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="dhd-Db-f3z"/>
+                        <group width="1" alignment="left" id="uSN-E6-RTc">
+                            <items>
+                                <imageView width="16" height="16" alignment="left" id="Ozv-2z-cLb"/>
+                                <label alignment="left" text="Humidity" textAlignment="justified" id="Cbw-LA-K8H">
+                                    <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="9sW-Mt-lEw">
+                            <items>
+                                <imageView width="16" height="16" alignment="left" id="wxx-Jo-aHv"/>
+                                <label alignment="left" text="Pressure:" textAlignment="justified" id="1wD-MS-FMR">
+                                    <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="sql-Qm-ChL">
+                            <items>
+                                <imageView width="16" height="16" alignment="left" id="EzM-hY-RdK"/>
+                                <label alignment="left" text="Windspeed:" textAlignment="justified" id="EUm-W3-61d">
+                                    <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
                     <connections>
-                        <segue destination="HNt-xr-KYB" kind="relationship" relationship="nextPage" id="Dkj-eH-6Lm"/>
+                        <outlet property="humidityLabel" destination="Cbw-LA-K8H" id="w68-f4-5wt"/>
+                        <outlet property="pressureLabel" destination="1wD-MS-FMR" id="CQQ-wB-n5d"/>
+                        <outlet property="temperatureImage" destination="Qrt-SA-WtQ" id="fHr-Xz-Lf5"/>
+                        <outlet property="temperatureLabel" destination="MyA-mX-U8A" id="NuK-lH-QoF"/>
+                        <outlet property="windspeedLabel" destination="EUm-W3-61d" id="3Lv-ny-dbe"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="841" y="359"/>
-        </scene>
-        <!--loadedViewThree-->
-        <scene sceneID="qQF-o6-t7E">
-            <objects>
-                <controller identifier="loadedViewThree" id="HNt-xr-KYB"/>
-            </objects>
-            <point key="canvasLocation" x="1123" y="354"/>
         </scene>
     </scenes>
 </document>

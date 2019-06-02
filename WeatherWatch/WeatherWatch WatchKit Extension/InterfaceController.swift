@@ -76,7 +76,7 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
 
         print("Trying to load loaded controller")
        
-        WKInterfaceController.reloadRootPageControllers(withNames: ["loadedView","loadedViewTwo","loadedViewThree"], contexts: [self.weatherData!], orientation: .horizontal, pageIndex: 2)
+        WKInterfaceController.reloadRootPageControllers(withNames: ["loadedView","loadedViewTwo"], contexts: [self.weatherData!,self.weatherData!], orientation: .horizontal, pageIndex: 1)
         
     }
     
