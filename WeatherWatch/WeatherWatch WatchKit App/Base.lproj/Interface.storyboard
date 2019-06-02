@@ -79,24 +79,24 @@
                         <separator alignment="left" id="dhd-Db-f3z"/>
                         <group width="1" alignment="left" id="uSN-E6-RTc">
                             <items>
-                                <imageView width="16" height="16" alignment="left" id="Ozv-2z-cLb"/>
-                                <label alignment="left" text="Humidity" textAlignment="justified" id="Cbw-LA-K8H">
+                                <imageView width="16" height="16" alignment="left" image="icons8-hygrometer-16" contentMode="scaleAspectFill" id="Ozv-2z-cLb"/>
+                                <label alignment="center" text="Humidity" textAlignment="justified" id="Cbw-LA-K8H">
                                     <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
                                 </label>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="9sW-Mt-lEw">
                             <items>
-                                <imageView width="16" height="16" alignment="left" id="wxx-Jo-aHv"/>
-                                <label alignment="left" text="Pressure:" textAlignment="justified" id="1wD-MS-FMR">
+                                <imageView width="16" height="16" alignment="left" image="icons8-pressure-17" contentMode="scaleAspectFit" id="wxx-Jo-aHv"/>
+                                <label alignment="center" text="Pressure:" textAlignment="justified" id="1wD-MS-FMR">
                                     <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
                                 </label>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="sql-Qm-ChL">
                             <items>
-                                <imageView width="16" height="16" alignment="left" id="EzM-hY-RdK"/>
-                                <label alignment="left" text="Windspeed:" textAlignment="justified" id="EUm-W3-61d">
+                                <imageView width="16" height="16" alignment="left" image="icons8-air-16" id="EzM-hY-RdK"/>
+                                <label alignment="center" text="Windspeed:" textAlignment="justified" id="EUm-W3-61d">
                                     <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
                                 </label>
                             </items>
