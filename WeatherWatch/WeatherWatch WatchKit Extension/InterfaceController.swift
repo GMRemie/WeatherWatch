@@ -37,9 +37,15 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
 
 
         getWeatherData()
+          var watchTimer = Timer.scheduledTimer(timeInterval: 900.0, target: self, selector: #selector(InterfaceController.refreshWatch), userInfo: nil, repeats: true)
         
    }
     
+    @objc func refreshWatch()
+    {
+        getWeatherData()
+    }
+
     
     func getWeatherData(){
         

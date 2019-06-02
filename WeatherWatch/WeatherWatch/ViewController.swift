@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             myDelegate.loadWeatherData(weather: weatherData!)
         }
 
-        
+
     }
     
     
@@ -44,6 +44,8 @@ class ViewController: UIViewController {
         weatherData = weatherObj
         // finished loading
         performSegue(withIdentifier: "loadedSegue", sender: self)
+      
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

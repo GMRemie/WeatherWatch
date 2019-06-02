@@ -21,10 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              else{fatalError("Error")}
             self.session?.sendMessageData(data,replyHandler: nil,errorHandler: nil)
             print("Message sent")
+
         }
     }
     
-    
+
     
     var session: WCSession? {
         didSet{
@@ -39,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if WCSession.isSupported() {
             session = WCSession.default
         }
-        //getWeatherJsonData()
+
         return true
     }
 }
@@ -65,16 +66,19 @@ extension AppDelegate:WCSessionDelegate{
                     else{fatalError("Error")}
                 
                 replyHandler(["newWeather": data])
+                self.updateJSONData()
+
             }
         }
+        
     }
 }
 
 extension AppDelegate{
-    // api downloader
-    func getWeatherJsonData(){
+    
+    func updateJSONData(){
         
-        print("This was AAAAran")
+        print("Updating Data")
         guard let url = URL(string: "https://api.airvisual.com/v2/nearest_city?key=HMb6tJNuErQoWcD8f") else{
             print("Error constructing URL"); return
         }
@@ -134,9 +138,8 @@ extension AppDelegate{
         
         let dataobj = Weather.init(_city: city, _state: state, _country: country, _humidity: humidity, _icon: icon, _pressure: pressure, _temperature: temp, _windspeed: windspeed, _quality: quality)
         
-        weatherData = dataobj
+        self.weatherData = dataobj
         
         print("Completed creating weather Object")
     }
-    
 }

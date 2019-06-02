@@ -18,6 +18,7 @@ class LoadedViewController: UIViewController {
     
     @IBOutlet weak var qualityColor: UIView!
     @IBOutlet weak var qualityLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     
     
     
@@ -40,8 +41,7 @@ class LoadedViewController: UIViewController {
         //temperature image
         updateWeatherImage()
         
-        // Do any additional setup after loading the view.
-        print("Final test \(weatherData.temperature!)")
+        locationLabel.text = "\(weatherData.city!), \(weatherData.state!)"
     }
     
     

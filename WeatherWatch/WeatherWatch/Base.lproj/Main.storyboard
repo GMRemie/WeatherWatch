@@ -110,11 +110,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMA-Mc-8zG">
-                                <rect key="frame" x="161" y="525" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Refresh"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -142,6 +137,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="BDe-Ux-cfn" id="xoc-1D-V5n"/>
+                        <outlet property="locationLabel" destination="FAk-59-QPO" id="TWm-B8-EOd"/>
                         <outlet property="qualityColor" destination="piG-rT-phA" id="SED-oh-ktU"/>
                         <outlet property="qualityLabel" destination="2QZ-NE-SCD" id="iiK-9O-JVD"/>
                         <outlet property="temperatureImage" destination="Bke-YX-GHE" id="kFO-bW-nFS"/>
